@@ -1,7 +1,6 @@
-source $HOME/.zantigen/antigen.zsh
-POWERLEVEL9K_INSTALLATION_PATH=$ANTIGEN_BUNDLES/bhilburn/powerlevel9k
+source ~/.antigen/antigen.zsh
 
-# PowerLevel9k prompt config
+## Powerlevek9k config params
 POWERLEVEL9K_MODE='nerdfont-complete'
 
 POWERLEVEL9K_LEFT_PROMPT_ELEMENTS=(time virtualenv context dir vcs root_indicator)
@@ -46,21 +45,21 @@ POWERLEVEL9K_DIR_DEFAULT_FOREGROUND="white"
 POWERLEVEL9K_TIME_BACKGROUND="black"
 POWERLEVEL9K_TIME_FOREGROUND="cyan"
 
-# Load the oh-my-zsh's library.
+## Use oh-my-zsh
 antigen use oh-my-zsh
 
-# Bundles from the default repo (robbyrussell's oh-my-zsh).
+## Use some plugins
 antigen bundle git
-antigen bundle heroku
+antigen bundle docker
+antigen bundle kubernetes
 antigen bundle pip
 antigen bundle lein
 antigen bundle command-not-found
-
-# Syntax highlighting bundle.
 antigen bundle zsh-users/zsh-syntax-highlighting
 
-# Load the theme.
+
+## Load a custom Theme
+#antigen theme cloud
 antigen theme bhilburn/powerlevel9k powerlevel9k
 
-# Tell Antigen that you're done.
 antigen apply
